@@ -26,7 +26,7 @@ export const Navbar: FC<NavbarProps> = ({}) => {
                 {link.href === "/" ? (
                   <div className="flex items-center gap-x-2">
                     <Image
-                      src={`/assets/${theme === "dark" ? "logo-white" : "logo"}.svg`}
+                      src={`/assets/${theme === "dark" || theme !== "light" ? "logo-white" : "logo"}.svg`}
                       alt="Logo"
                       width={120}
                       height={30}
