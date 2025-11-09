@@ -32,7 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="container mx-auto my-4">{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>
