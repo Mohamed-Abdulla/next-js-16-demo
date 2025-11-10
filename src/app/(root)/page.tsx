@@ -1,4 +1,6 @@
+import { EventCard } from "@/components/event-card";
 import { ExploreBtn } from "@/components/explore-btn";
+import { events } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -15,9 +17,9 @@ export default function Home() {
         <h3>Featured Events</h3>
 
         <ul className="events">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <li key={index} className="event-card">
-              <h4>Event Title {index + 1}</h4>
+          {events.map((event, index) => (
+            <li key={index} className="event-title">
+              <EventCard {...event} />
             </li>
           ))}
         </ul>
