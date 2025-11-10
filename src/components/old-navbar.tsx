@@ -7,7 +7,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { NAV_LINKS } from "@/constants/navlinks";
+import { NAV_LINKS } from "@/lib/navlinks";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { ModeToggle } from "./toggle-theme";

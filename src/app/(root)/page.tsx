@@ -1,7 +1,15 @@
+import { ExploreBtn } from "@/components/explore-btn";
+
 export default function Home() {
   return (
-    <div className="text-2xl">
-      <h1 className="mb-4">Welcome to the Home Page</h1>
-    </div>
+    <section>
+      <h1 className="text-center">
+        The Hub for Every Dev <br /> Event You Can't Miss
+      </h1>
+      <p className="mt-5 text-center">
+        Hackathons, Meetups, and Conferences, All in One Place
+      </p>
+      <ExploreBtn />
+    </section>
   );
 }

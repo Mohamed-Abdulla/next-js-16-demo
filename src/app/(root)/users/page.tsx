@@ -1,4 +1,4 @@
-import { USERS } from "@/constants/navlinks";
+import { USERS } from "@/lib/navlinks";
 import Link from "next/link";
 import { FC } from "react";
 
