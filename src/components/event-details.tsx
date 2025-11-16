@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { IEvent } from "../../database";
 import { getSimilarEventsBySlug } from "@/actions/event.actions";
 import { EventCard } from "./event-card";
+import BookEvent from "./book-event";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -142,20 +143,20 @@ const EventDetails = async ({ params }: { params: Promise<string> }) => {
         </div>
 
         {/*    Right Side - Booking Form */}
-        {/* <aside className="booking">
-                    <div className="signup-card">
-                        <h2>Book Your Spot</h2>
-                        {bookings > 0 ? (
-                            <p className="text-sm">
-                                Join {bookings} people who have already booked their spot!
-                            </p>
-                        ): (
-                            <p className="text-sm">Be the first to book your spot!</p>
-                        )}
+        <aside className="booking">
+          <div className="signup-card">
+            <h2>Book Your Spot</h2>
+            {bookings > 0 ? (
+              <p className="text-sm">
+                Join {bookings} people who have already booked their spot!
+              </p>
+            ) : (
+              <p className="text-sm">Be the first to book your spot!</p>
+            )}
 
-                        <BookEvent eventId={event._id} slug={event.slug} />
-                    </div>
-                </aside> */}
+            <BookEvent eventId={event._id} slug={event.slug} />
+          </div>
+        </aside>
       </div>
 
       <div className="flex w-full flex-col gap-4 pt-20">
